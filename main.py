@@ -1,5 +1,5 @@
 from image import classify
-from drive_safe import gof, stop, left, right, backward,
+from drive_safe import gof, stop, left, right, backward
 
 
 stopped = True
@@ -45,7 +45,7 @@ def main():
                 stop()
                 turning = True
             else:
-                turnCount++
+                turnCount += 1
 
             if d[2] > d[0]:
                 do('echo "turning left." | flite ')

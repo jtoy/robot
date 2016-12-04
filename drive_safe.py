@@ -208,24 +208,20 @@ def main():
 
         elif (mind < THRESH and stopped):
             if (not turning):
-            	stop()
-            	turning = True
-        	else:
-        		turnCount += 1
+                stop()
+                turning = True
+            else:
+                turnCount += 1
 
-        	if d[2] > d[0]:
-        		do('echo "turning left." | flite ')
-        		left(255, 0.5)
-        	else:
-        		do('echo "turning right." | flite ')
-        		right(255, 0.5)
+            if d[2] > d[0]:
+                do('echo "turning left." | flite ')
+                left(255, 0.5)
+            else:
+                do('echo "turning right." | flite ')
+                right(255, 0.5)
 
-        	time.sleep(0.3)
-        	stopped = True
-        #	elif (turning==False):	# robot is moving happily
-        	#newSpd = getAttention();
-        	#setSpeed(newSpd);
-
+            time.sleep(0.3)
+            stopped = True
 
 if __name__ == '__main__':
     main()
