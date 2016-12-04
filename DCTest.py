@@ -7,6 +7,7 @@ import atexit
 # create a default object, no changes to I2C address or frequency
 mh = Adafruit_MotorHAT(addr=0x60)
 
+
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
 	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
@@ -22,9 +23,9 @@ myMotor = mh.getMotor(int(sys.argv[1]))
 
 # set the speed to start, from 0 (off) to 255 (max speed)
 myMotor.setSpeed(150)
-myMotor.run(Adafruit_MotorHAT.FORWARD);
+myMotor.run(Adafruit_MotorHAT.FORWARD)
 # turn on motor
-myMotor.run(Adafruit_MotorHAT.RELEASE);
+myMotor.run(Adafruit_MotorHAT.RELEASE)
 
 
 while (True):
