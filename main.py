@@ -1,5 +1,5 @@
 from image import classify
-from drive_safe import gof, stop, left, right, backward, turnOffMotors, distance
+from drive_safe import *
 
 
 stopped = True
