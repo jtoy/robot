@@ -24,20 +24,6 @@ THRESH = 25
 turnCount = 0
 maxTurnCount = 3
 
-################################# DC motor test!
-mFL = mh.getMotor(1)
-mBL = mh.getMotor(2)
-mBR = mh.getMotor(3)
-mFR = mh.getMotor(4)
-
-atexit.register(turnOffMotors)
-
-wakeup(mFL)
-wakeup(mBL)
-wakeup(mFR)
-wakeup(mBL)
-setup()
-
 
 def do(cmd):
     print(cmd)
@@ -174,8 +160,23 @@ def getAttention():
 
     return newSpd
 
+    ################################# DC motor test!
+    mFL = mh.getMotor(1)
+    mBL = mh.getMotor(2)
+    mBR = mh.getMotor(3)
+    mFR = mh.getMotor(4)
+
+    atexit.register(turnOffMotors)
+
+    wakeup(mFL)
+    wakeup(mBL)
+    wakeup(mFR)
+    wakeup(mBL)
+    setup()
+
 
 def main():
+
     while(True):
         print("driving!")
 
