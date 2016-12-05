@@ -12,8 +12,8 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-TRIG = [23, 17, 22]
-ECHO = [24, 18, 27]
+TRIG = [24, 22]
+ECHO = [23, 27]
 
 # create a default object, no changes to I2C address or frequency
 mh = Adafruit_MotorHAT(addr=0x60)
@@ -31,7 +31,7 @@ def do(cmd):
 
 
 def setup():
-    for i in range(3):
+    for i in range(2):
         GPIO.setup(TRIG[i], GPIO.OUT)
         GPIO.setup(ECHO[i], GPIO.IN)
         GPIO.output(TRIG[i], False)
@@ -41,6 +41,8 @@ def setup():
 
 def distance(i):
     # print "Distance Measurement In Progress"
+    print i
+    print TRIG[i]
 
     GPIO.output(TRIG[i], True)
     time.sleep(0.00001)
